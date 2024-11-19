@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol {
+    list-style-type: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+    background-color: #ECE0B5;
+    padding: 20px;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo-text {
+    color: #44944A;
+    font-family: "Montserrat Alternates";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* .input-container {} */
+
+.input-container__loop {
+    position: absolute;
+    z-index: 10;
+    top: 3%;
+    left: 26%;
+}
+
+.input-container__input-search {
+    position: relative;
+    width: 600px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: rgba(254, 255, 239, 0.80);
+    border: 0px;
+    outline: none;
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.menu-item {
+    color: #44944A;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.menu__user-button {
+    color: #44944A;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 2px solid #44944A;
+    background: rgba(217, 217, 217, 0.00);
+    padding: 0 10px;
+    cursor: pointer;
+}
