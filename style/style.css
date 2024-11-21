@@ -19,6 +19,7 @@ ol {
     background-color: #ECE0B5;
     padding: 20px;
     align-items: center;
+    align-self: center;
 }
 
 .header-logo {
@@ -39,15 +40,21 @@ ol {
 
 /* .input-container {} */
 
+.input-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .input-container__loop {
     position: absolute;
     z-index: 10;
-    top: 3%;
-    left: 26%;
+    top: 10%;
+    left: 1rem;
 }
 
 .input-container__input-search {
-    position: relative;
     width: 600px;
     height: 40px;
     flex-shrink: 0;
@@ -56,7 +63,8 @@ ol {
     border: 0px;
     outline: none;
     font-size: 20px;
-    padding-left: 50px;
+    padding-left: 3rem;
+    font-family: Montserrat;
 }
 
 .header-menu {
@@ -71,7 +79,7 @@ ol {
     flex-direction: row;
     gap: 20px;
     align-items: center;
-
+    margin: 0;
 }
 
 .menu-item {
@@ -94,4 +102,35 @@ ol {
     background: rgba(217, 217, 217, 0.00);
     padding: 0 10px;
     cursor: pointer;
+}
+
+.carousel-item-1 {
+    position: relative;
+}
+
+.carousel-item__title-container {
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    position: absolute;
+    bottom: 18%;
+    left: 0;
+    width: 623.934px;
+    height: 105px;
+    flex-shrink: 0;
+    border-radius: 0px 20px 20px 0px;
+    background: rgba(68, 148, 74, 0.90);
+}
+
+.carousel-item__title {
+    width: 646.892px;
+    height: 77.833px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "Montserrat Alternates";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 40px;
+    letter-spacing: 5px;
 }
