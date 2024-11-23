@@ -36,6 +36,12 @@
     }
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
 
 
@@ -130,6 +136,7 @@ ol {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    transition: font-size .2s ease-in;
 }
 
 .menu-item:hover {
@@ -150,7 +157,7 @@ ol {
     cursor: pointer;
 }
 
-.carousel-item-1 {
+.carousel-item{
     position: relative;
 }
 
@@ -161,7 +168,7 @@ ol {
     position: absolute;
     bottom: 18%;
     left: 0;
-    width: 623.934px;
+    min-width: 623px;
     height: 105px;
     flex-shrink: 0;
     border-radius: 0px 20px 20px 0px;
@@ -169,8 +176,6 @@ ol {
 }
 
 .carousel-item__title {
-    width: 646.892px;
-    height: 77.833px;
     flex-shrink: 0;
     color: #FFF;
     font-family: "Montserrat Alternates";
@@ -267,4 +272,36 @@ ol {
 
 .news-text-size {
     max-width: 50%;
+}
+
+.category-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#content-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-out, padding .5s ease-out;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+#content-box.active {
+    max-height: 100vh;
+    padding: 20px;
+}
+
+.button-container {
+    cursor: pointer;
+    background-color: #44944A;
+    color: white;
+    text-align: center;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.button-container:hover {
+    background-color: #367537;
 }
