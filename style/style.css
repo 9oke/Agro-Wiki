@@ -9,6 +9,44 @@ html {
     scroll-behavior: smooth;
 }
 
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+#loading-screen.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #44944A;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +58,11 @@ a {
 
 ol {
     list-style-type: none;
+}
+
+.button-hover-green:hover {
+    background-color: #44944A;
+    color: #ffffff;
 }
 
 .header {
@@ -123,11 +166,6 @@ ol {
     padding: 3px 40px;
     cursor: pointer;
     transition: background-color .5s ease-out;
-}
-
-.menu__user-button:hover {
-    background-color: #44944A;
-    color: #ffffff;
 }
 
 .carousel-item {
@@ -284,6 +322,8 @@ ol {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
+    margin-bottom: 100px;
 }
 
 .category-section__title {
@@ -293,7 +333,7 @@ ol {
     width: 588.119px;
     height: 96.063px;
     flex-shrink: 0;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .category-section__left-container {
@@ -330,7 +370,7 @@ ol {
 
 .category-section__right-container {
     position: absolute;
-    right: 660px;
+    right: 35%;
     padding-left: 40px;
     display: flex;
     align-items: center;
@@ -364,10 +404,13 @@ ol {
 
 .category-section__category-cards {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(4, 28%);
+    grid-template-rows: repeat(2, 58%);
     gap: 20px;
     flex-shrink: 0;
+    margin-bottom: 120px;
+    justify-content: center;
+    justify-items: center;
 }
 
 .category-cards__card {
@@ -378,15 +421,54 @@ ol {
     justify-content: flex-end;
     padding-left: 20px;
     padding-bottom: 20px;
-    background: url(/img/card-image-1.png) 0px 0px no-repeat;
-    background-size: cover;
     width: 255.100px;
     height: 255.185px;
     border-radius: 20px;
     flex-shrink: 0;
+    filter: drop-shadow(15px 25px 25px rgba(0, 0, 0, 0.45));
 }
 
-.category-cards__card::before {
+.category-cards__image1 {
+    background: url(/img/card-image-1.png) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image2 {
+    background: url(/img/gardening.png) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image3 {
+    background: url(/img/card-3.webp) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image4 {
+    background: url(/img/card-4.webp) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image5 {
+    background: url(/img/card-5.webp) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image6 {
+    background: url(/img/card-6.webp) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image7 {
+    background: url(/img/card-7.webp) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__image8 {
+    background: url(/img/card-8.webp) 0px 0px no-repeat;
+    background-size: cover;
+}
+
+.category-cards__glass::before {
     content: '';
     display: block;
     width: 100%;
@@ -423,6 +505,11 @@ ol {
     padding-left: 15px;
     cursor: pointer;
     z-index: 2;
+    transition: background-color .5s ease-out;
+}
+
+.category-cards__card__button-container:hover {
+    background-color: #f1f1f1dd;
 }
 
 .category-cards__card__button-link {
@@ -434,4 +521,374 @@ ol {
     line-height: normal;
     margin: 0;
     z-index: 2;
+}
+
+.category-section__button-contaner {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+
+.category-section__button-contaner button {
+    border-radius: 30px;
+    background: #44944A;
+    width: 444.424px;
+    height: 74px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "Montserrat Alternates";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    outline: none;
+    border: 0;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+.content-section__title {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 720px;
+}
+
+
+.blog-container__title {
+    display: flex;
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.blog-container__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 700px;
+    height: 350px;
+    flex-shrink: 0;
+    background-image: url(/img/image-blog.png);
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+
+.blog-container__image-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.blog-container__arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 300px;
+    height: 100px;
+}
+
+.content-section__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-section__text__title {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    max-width: 700px;
+}
+
+.content-section__text_description {
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 600px;
+    min-height: 100px;
+}
+
+.content-section__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    max-height: 100px;
+}
+
+.content-section__button-link {
+    border-radius: 30px;
+    border: 5px solid #44944A;
+    background: #FFF;
+    flex-shrink: 0;
+    color: #44944A;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 20px 100px;
+    transition: background-color .5s ease-out;
+}
+
+/* БИОГРАФИЯ - контейнер */
+.bio-container {
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+}
+
+.human-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 33.333%);
+    gap: 30px;
+    justify-items: center;
+    max-width: 721px;
+    flex-shrink: 0;
+}
+
+.human-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.human-card img {
+    width: 175px;
+    height: 175px;
+}
+
+.human-card__title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 309px;
+}
+
+
+.bio-container__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    max-height: 100px;
+}
+
+.bio-container__button-link {
+    border-radius: 30px;
+    border: 5px solid #44944A;
+    background: #FFF;
+    flex-shrink: 0;
+    color: #44944A;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    padding: 20px 100px;
+    transition: background-color .5s ease-out;
+}
+
+
+/* Мерч */
+
+.merch-section {
+    position: relative;
+    padding-left: 13%;
+    margin-bottom: 100px;
+}
+
+.merch-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 3657px;
+    max-height: 950px;
+    flex-shrink: 0;
+}
+
+.merch-card {
+    max-width: 500px;
+    max-height: 900px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #FFF;
+    box-shadow: 10px 30px 8px 0px rgba(0, 0, 0, 0.25);
+    padding-bottom: 20px;
+}
+
+
+
+.merch-card__image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    background: #FFF4CC;
+    box-shadow: 0px 10px 6px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    max-width: 500px;
+    height: 405.797px;
+    flex-shrink: 0;
+}
+
+.merch-card__image img {
+    max-width: 450px;
+    max-height: 450px;
+    background-image: cover;
+}
+
+.merch-card__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.merch-card__button-left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.merch-card__button-right {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+.arrow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 180px;
+    background-color: #ffffff;
+    list-style-type: none;
+    font-size: 40px;
+    color: #3c8442;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+.merch-card__title {
+    max-width: 405px;
+    height: 141px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 30px;
+}
+
+.merch-card__price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.price-container__fake-price {
+    text-decoration: line-through;
+    color: #333333;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 120px;
+    height: 36px;
+    flex-shrink: 0;
+    text-decoration: line-through;
+    z-index: 999;
+}
+
+.price-contaner__price-tag {
+    color: #44944A;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 213px;
+    height: 66px;
+    flex-shrink: 0;
+    text-decoration: underline;
+}
+
+.merch-card__button-link {
+    width: 426.89px;
+    height: 64.251px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 7px solid #44944A;
+    background: rgba(255, 255, 255, 0.00);
+    color: #44944A;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    transition: .5s ease-out;
+}
+
+.arrow {
+    cursor: pointer;
+    color: #3c8442;
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
 }
