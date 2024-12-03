@@ -84,3 +84,57 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const merchCards = document.querySelectorAll('.merch-card');
+let merchIndex = 0;
+
+// Выбор новых стрелок (div)
+const leftArrow = document.querySelector('.merch-card__button-left div');
+const rightArrow = document.querySelector('.merch-card__button-right div');
+
+function updateArrows() {
+    // Скрыть стрелку влево на первой карточке
+    if (merchIndex === 0) {
+        leftArrow.classList.add('hidden');
+    } else {
+        leftArrow.classList.remove('hidden');
+    }
+
+    // Скрыть стрелку вправо на последней карточке
+    if (merchIndex === merchCards.length - 1) {
+        rightArrow.classList.add('hidden');
+    } else {
+        rightArrow.classList.remove('hidden');
+    }
+}
+
+function showMerchCard(index) {
+    merchCards.forEach((card, i) => {
+        card.classList.remove('active');
+        if (i === index) {
+            card.classList.add('active');
+        }
+    });
+
+    // Обновить состояние стрелок
+    updateArrows();
+}
+
+// Инициализация: Показать первую карточку и обновить стрелки
+showMerchCard(merchIndex);
+
+// Перелистывание вправо
+rightArrow.addEventListener('click', () => {
+    if (merchIndex < merchCards.length - 1) {
+        merchIndex++;
+        showMerchCard(merchIndex);
+    }
+});
+
+// Перелистывание влево
+leftArrow.addEventListener('click', () => {
+    if (merchIndex > 0) {
+        merchIndex--;
+        showMerchCard(merchIndex);
+    }
+});
