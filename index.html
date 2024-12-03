@@ -16,9 +16,13 @@
 </head>
 
 <body>
+    <div id="loading-screen">
+        <!-- <div class="spinner"></div> -->
+        <img src="/img/KOLOS.gif" alt="">
+    </div>
     <header class="header">
         <!--лого -->
-        <a href="#" class="header__logo-link">
+        <a href="index.html" class="header__logo-link">
             <div class="header-logo">
                 <!-- Картинка лого -->
                 <svg width="48" height="44" viewBox="0 0 48 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +45,16 @@
                 <h1 class="logo-text">Агро-Вики</h1>
             </div>
         </a>
+        <div class="header-menu">
+            <ol class="menu-items">
+                <a href="page2.html" class="menu-link">
+                    <li class="menu-item">Поддержка</li>
+                </a>
+                <a href="#" class="menu-link">
+                    <li class="menu-item">Форум</li>
+                </a>
+            </ol>
+        </div>
         <!-- инпут -->
         <div class="input-container">
             <input type="text" class="input-container__input-search">
@@ -56,7 +70,7 @@
         <!-- header меню -->
         <div class="header-menu">
             <ol class="menu-items">
-                <a href="#" class="menu-link">
+                <a href="page2.html" class="menu-link">
                     <li class="menu-item">Библиотека</li>
                 </a>
                 <a href="#" class="menu-link">
@@ -75,7 +89,7 @@
                 </svg>
             </a>
             <!-- Кнопка входа -->
-            <button class="menu__user-button">
+            <button class="menu__user-button button-hover-green">
                 Войти
             </button>
         </div>
@@ -83,7 +97,7 @@
     <section class="main-section">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item carousel-item-1 active">
+                <div class="carousel-item active">
                     <img src="/img/картинка поля с трактором.jpg" class="d-block w-100" alt="Слайд 1">
                     <div class="carousel-item__title-container">
                         <h1 class="carousel-item__title">
@@ -147,61 +161,251 @@
         </div>
         <!-- Сами категории -  карточки -->
         <div class="category-section__category-cards">
-            <div class="category-cards__card">
+            <div class="category-cards__card category-cards__image1 category-cards__glass">
                 <h2 class="category-cards__card__title">Земледелие</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image2 category-cards__glass">
+                <h2 class="category-cards__card__title">Садоводство</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image3 category-cards__glass">
+                <h2 class="category-cards__card__title">Почтвоведение</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image4 category-cards__glass">
+                <h2 class="category-cards__card__title">Агроэкология</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image5 category-cards__glass">
+                <h2 class="category-cards__card__title">Механизация АПК</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image6 category-cards__glass">
+                <h2 class="category-cards__card__title">Правовые нормативы</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image7 category-cards__glass">
+                <h2 class="category-cards__card__title">Образование в АПК</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
-            <div class="category-cards__card">
-                <h2 class="category-cards__card__title">Земледелие</h2>
+            <div class="category-cards__card category-cards__image8 category-cards__glass">
+                <h2 class="category-cards__card__title">Кадры в АПК</h2>
                 <div class="category-cards__card__button-container">
                     <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg" alt="">
                 </div>
             </div>
         </div>
+        <div class="category-section__button-contaner">
+            <button>Перейти в библиотеку</button>
+        </div>
+    </section>
+    <section class="content-section center">
+        <article class="blog-container">
+            <h1 class="blog-container__title">Наш Блог</h1>
+            <div class="blog-container__image">
+                <div class="blog-container__image-icons">
+                    <img src="/img/dzen-icon.svg" alt="" class="blog-container__icon-dzen">
+                    <div class="blog-container__arrow-button">
+                        <a href="#" class="arrow-button__left"><img src="/img/button-arrow-lft.svg" alt=""></a>
+                        <a href="#" class="arrow-button__right"><img src="/img/button-arrow-rgt.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section__text">
+                <h1 class="content-section__text__title">ТОП 10 идей для развития бизнеса в АПК</h1>
+                <p class="content-section__text_description">Золото издавна занимает особое место в экономических
+                    отношениях
+                    хозяйствующих субъектов. Отчасти его роль объясняется специфическими природными свойствами
+                    самого
+                    металла: стабильностью (не подвержено коррозии и разложению), чистотой месторождений. Значение
+                    имеет
+                    и
+                    редкость этого элемента. 1
+                    В современной экономике золото находит широкое применение. Им торгуют на бирже так же как и
+                    другими
+                    ресурсами и товарами — углём, нефтью, электричеством. Поэтому, прежде всего, оно рассматривается
+                    как
+                    высокоценный металл. </p>
+            </div>
+            <div class="content-section__button">
+                <button class="content-section__button-link button-hover-green">
+                    Читать дальше
+                </button>
+            </div>
+        </article>
+        <article class="bio-container">
+            <div class="human-cards">
+                <div class="human-card">
+                    <img src="/img/human1.svg" alt="">
+                    <h1 class="human-card__title">Николай Иванович Вавилов</h1>
+                </div>
+                <div class="human-card">
+                    <img src="/img/human2.svg" alt="">
+                    <h1 class="human-card__title">Дмитрий Николаевич Прянишников</h1>
+                </div>
+                <div class="human-card">
+                    <img src="/img/human3.svg" alt="">
+                    <h1 class="human-card__title">Терентий Семёнович Мальцев</h1>
+                </div>
+                <div class="human-card">
+                    <img src="/img/human4.svg" alt="">
+                    <h1 class="human-card__title">Камиль Галиевич Азиев</h1>
+                </div>
+                <div class="human-card">
+                    <img src="/img/human5.svg" alt="">
+                    <h1 class="human-card__title">Николай Максимович Тулайков</h1>
+                </div>
+                <div class="human-card">
+                    <img src="/img/human6.svg" alt="">
+                    <h1 class="human-card__title">Айрапетян Аршавир Авакович</h1>
+                </div>
+            </div>
+            <div class="bio-container__button">
+                <button class="bio-container__button-link button-hover-green">
+                    Вся Биография
+                </button>
+            </div>
+        </article>
+    </section>
+    <section class="merch-section">
+        <div class="merch-card__button-left arrow">
+            <!-- <div class="arrow-button"> -->
+                <!-- < </div> -->
+        </div>
+        <div class="merch-card__button-right arrow">
+            <!-- <div href="" class="arrow-button"> -->
+                >
+            <!-- </div> -->
+        </div>
+        <div class="merch-container">
+            <article class="merch-card">
+                <div class="merch-card__image">
+                    <img src="/img/T-Shirt.svg" alt="">
+                    <div class="merch-card__button">
+                        <div class="merch-card__button-left">
+                            <a href="" class="arrow-button">
+                                < </a>
+                        </div>
+                        <div class="merch-card__button-right">
+                            <a href="#" class="arrow-button">
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="merch-card__title">Футболка (T-Shirt) с логотипом “Агро-Вики</div>
+                <div class="merch-card__price-container">
+                    <p class="price-container__fake-price">3000р</p>
+                    <p class="price-contaner__price-tag">2499р</p>
+                </div>
+                <button class="merch-card__button-link button-hover-green">
+                    В корзину
+                </button>
+            </article>
+            <article class="merch-card">
+                <div class="merch-card__image">
+                    <img src="/img/Notebook.svg" alt="">
+                    <div class="merch-card__button">
+                        <div class="merch-card__button-left">
+                            <a href="#" class="arrow-button">
+                                < </a>
+                        </div>
+                        <div class="merch-card__button-right">
+                            <a href="#" class="arrow-button">
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="merch-card__title">Блокнот с логотипом “Агро-Вики”
+                </div>
+                <div class="merch-card__price-container">
+                    <p class="price-container__fake-price">249р</p>
+                    <p class="price-contaner__price-tag">129р</p>
+                </div>
+                <div class="merch-card__button">
+                    <button class="merch-card__button-link button-hover-green">
+                        В корзину
+                    </button>
+                </div>
+            </article>
+            <article class="merch-card">
+                <div class="merch-card__image">
+                    <img src="/img/Bode.svg" alt="">
+                    <div class="merch-card__button">
+                        <div class="merch-card__button-left">
+                            <a href="#" class="arrow-button">
+                                < </a>
+                        </div>
+                        <div class="merch-card__button-right">
+                            <a href="#" class="arrow-button">
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="merch-card__title">Тетрадь с брендингом “Агро-Вики”
+                </div>
+                <div class="merch-card__price-container">
+                    <p class="price-container__fake-price">89р</p>
+                    <p class="price-contaner__price-tag">39р</p>
+                </div>
+                <div class="merch-card__button">
+                    <button class="merch-card__button-link button-hover-green">
+                        В корзину
+                    </button>
+                </div>
+            </article>
+            <article class="merch-card ">
+                <div class="merch-card__image">
+                    <img src="/img/T-Shirt.svg" alt="">
+                    <div class="merch-card__button">
+                        <div class="merch-card__button-left">
+                            <a href="#" class="arrow-button">
+                                < </a>
+                        </div>
+                        <div class="merch-card__button-right">
+                            <a href="#" class="arrow-button">
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="merch-card__title">Футболка (T-Shirt)
+                    с логотипом “Агро-Вики”
+                </div>
+                <div class="merch-card__price-container">
+                    <p class="price-container__fake-price">3000р</p>
+                    <p class="price-contaner__price-tag">2599р</p>
+                </div>
+                <div class="merch-card__button">
+                    <button class="merch-card__button-link button-hover-green">
+                        В корзину
+                    </button>
+                </div>
+            </article>
+        </div>
     </section>
 
 
 
-
     <script src="/js/script.js"></script>
+    <script src="/js/loading.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
