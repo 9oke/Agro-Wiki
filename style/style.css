@@ -104,8 +104,11 @@ ol {
     padding: 0 1rem;
 }
 
-.loop {
+.input-container a {
     order: -1;
+}
+
+.loop {
     margin-right: 1rem;
 }
 
@@ -397,6 +400,19 @@ ol {
 
 /* Категории - библиотека */
 
+.category-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 15vh;
+    background-color: #FFF6D7;
+    border-radius: 40px;
+    padding: 3rem 0;
+    filter: drop-shadow(15px 25px 25px rgba(0, 0, 0, 0.25));
+}
+
 /* Базовые стили */
 .slider {
     width: 100%;
@@ -409,7 +425,10 @@ ol {
     position: relative;
     background-color: beige;
     border-radius: 8px;
+    width: 30vw;
     overflow: hidden;
+    filter: drop-shadow(5px 15px 15px rgba(0, 0, 0, 0.15));
+    margin-bottom: 5vh;
 }
 
 .slider-btn {
@@ -418,16 +437,20 @@ ol {
     padding: 10px 0;
     cursor: pointer;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
     outline: none;
     border: none;
+    font-family: "Montserrat";
+    font-weight: 800;
+    z-index: 1;
 }
 
 .slider-btn:focus {
     outline: none;
     box-shadow: none;
+    transition: all .5s ease-out;
 }
 
 input[type="radio"] {
@@ -469,27 +492,14 @@ input[type="radio"] {
 /* Цвет кнопок */
 #library:checked~.slider-buttons label[for="library"],
 #categories:checked~.slider-buttons label[for="categories"] {
-    background-color: green;
+    background-color: transparent;
     color: white;
 }
 
 #library:checked~.slider-buttons label[for="categories"],
 #categories:checked~.slider-buttons label[for="library"] {
-    background-color: beige;
-    color: black;
-}
-
-.category-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 15vh;
-    background-color: #FFF6D7;
-    border-radius: 40px;
-    padding: 3rem 0;
-    filter: drop-shadow(15px 25px 25px rgba(0, 0, 0, 0.25));
+    background-color: #ffffff;
+    color: #3c8442;
 }
 
 .category-section__title {
@@ -1303,8 +1313,6 @@ input[type="radio"] {
     fill: #44944bad;
 }
 
-.footer-mailing {}
-
 .footer-mailing__title {
     color: #44944A;
     font-family: "Montserrat";
@@ -1435,7 +1443,6 @@ input[type="radio"] {
     .button-container {
         width: 70vw;
     }
-
 
 
 
