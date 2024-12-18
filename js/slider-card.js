@@ -11,7 +11,7 @@ const cardWidth = cards[0].offsetWidth + 16;
 let currentIndex = 0;
 
 nextButton.addEventListener('click', () => {
-    if (currentIndex < cards.length - 3) {
+    if (currentIndex < cards.length - 1) {
         currentIndex++;
         track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
