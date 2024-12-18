@@ -8,6 +8,27 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    background-color: #f9f9fd;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #3c8442;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
 }
 
 #loading-screen {
@@ -334,8 +355,10 @@ ol {
 }
 
 .news-image {
-    max-width: 30vw;
-    max-height: 20vh;
+    float: left;
+    width: 20%;
+    max-height: 20%;
+    object-fit: cover;
 }
 
 .news-container.active {
@@ -470,14 +493,87 @@ input[type="radio"] {
 /* Контент */
 .slider-content {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content {
     display: none;
 }
 
+.library-content__text {
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.book-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 6rem;
+    margin-bottom: 5vh;
+    padding: 0 7rem;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+.book-card img {
+    width: 9vw;
+}
+
+.book-card__title-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card__title {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+.book-card__description {
+    max-width: 100%;
+    font-size: 1rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+
+.book-card__button {
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color: #3c8442;
+    border: 3px #3c8442 solid;
+    transition: background-color .5s ease;
+}
+
+.book-card__button:hover {
+    background-color: #44944A;
+}
+
+
+.book-card__link {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+
 #library:checked~.slider-content #library-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #categories:checked~.slider-content #categories-content {
@@ -674,7 +770,7 @@ input[type="radio"] {
 
 .category-section__button-contaner button {
     border-radius: 30px;
-    background: #44944A;
+    background: #3c8442;
     width: 30vw;
     height: 7vh;
     flex-shrink: 0;
@@ -686,6 +782,11 @@ input[type="radio"] {
     line-height: normal;
     outline: none;
     border: 0;
+    transition: background-color .5s ease;
+}
+
+.category-section__button-contaner button:hover {
+    background: #44944A;
 }
 
 /* Content */
@@ -783,7 +884,7 @@ input[type="radio"] {
 
 .content-section__text_description {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     color: #000;
@@ -843,6 +944,7 @@ input[type="radio"] {
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(3, 3fr);
     gap: 2rem;
+    align-items: center;
     justify-items: center;
     max-width: 70vw;
     flex-shrink: 0;
@@ -1219,7 +1321,7 @@ input[type="radio"] {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.3remz;
+    gap: 1.3rem;
 }
 
 .logo {
@@ -1410,6 +1512,10 @@ input[type="radio"] {
         ;
     }
 
+    .menu-icon__burger {
+        order: 1;
+    }
+
     .menu__user-button {
         display: none;
     }
@@ -1444,12 +1550,635 @@ input[type="radio"] {
         width: 70vw;
     }
 
+    .slider-buttons {
+        width: 60vw;
+    }
+
+    .book-cards {
+        grid-template-columns: 1fr;
+    }
 
 
 
+    .category-section__button-contaner button {
+        width: 65vw;
+    }
+
+    .category-section__category-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .category-cards__card {
+        width: 29vw;
+    }
+
+    .content-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7rem;
+    }
+
+    .blog-container {
+        max-width: 70vw;
+    }
+
+    .blog-container__image {
+        width: 100%;
+    }
+
+    .content-section__text {
+        align-items: center;
+    }
+
+    .content-section__text_description {
+        max-width: 70vw;
+    }
+
+    .circle-1 {
+        left: 0%;
+        bottom: 12px;
+        width: 250px;
+    }
+
+    .circle-2 {
+        width: 250px;
+        top: -2%;
+        right: 1%;
+    }
+
+    .bio-container__title {
+        max-width: 60vw;
+    }
+
+    .human-cards {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .human-card:nth-child(5),
+    .human-card:nth-child(6) {
+        display: none;
+    }
+
+    .merch-section {
+        align-items: normal;
+    }
+
+    .merch-track {
+        transform: translateX(0);
+        width: 78%;
+    }
+
+    .merch-card {
+        min-width: calc(124% / 2);
+        align-items: center;
+        height: 65vh;
+    }
+
+    .merch-card img {
+        width: 280px;
+        height: 250px;
+    }
+
+    .merch-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .merch-card__image {
+        width: 43vw;
+        height: 35vh;
+    }
+
+    .merch-card button {
+        width: 90%;
+    }
+
+    .merch-card .price {
+        padding-right: 40%;
+    }
+
+    .merch-buttons {
+        padding: 10px;
+    }
+
+    .circle-3 {
+        bottom: 48px;
+        right: -13px;
+        width: 250px;
+    }
+
+    .calendar-container {
+        flex-direction: column;
+    }
+
+    .book-card img {
+        width: 25vw;
+    }
+
+    .events h3 {
+        max-width: 80vw;
+    }
+
+    .events-list {
+        max-width: 80vw;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .lft-footer {
+        flex-direction: row;
+    }
+
+    .logo {
+        border: none;
+    }
+
+    .logo img {
+        width: 45vw;
+    }
+
+    .logo-desc {
+        max-width: 50vw;
+    }
+
+    .footer-contacts__connection {
+        border: none;
+    }
+
+    .footer-contacts {
+        order: 1;
+    }
+
+    .footer-mailing__text {
+        max-width: 75vw;
+    }
+
+    .footer-mailing__input {
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 575px) {
+    .header {
+        padding: 20px;
+    }
 
 
+    .header-logo svg {
+        width: 34px;
+    }
 
+    .logo-text {
+        font-size: 1.5rem;
+    }
 
+    .menu-items {
+        top: 8%;
+        padding: 5rem;
+    }
 
+    .carousel-item__title-container {
+        padding-left: 1rem;
+        max-width: 87vw;
+    }
+
+    .carousel-item__title {
+        max-width: 84vw;
+    }
+
+    .news-image {
+        width: 68%;
+        height: 62%;
+    }
+
+    .news-container {
+        flex-direction: column;
+    }
+
+    .news-container.active {
+        flex-direction: column;
+    }
+
+    .news-content p {
+        max-width: 66vw;
+    }
+
+    .news-content button {
+        width: 65vw;
+    }
+
+    .slider-buttons {
+        width: 80vw;
+    }
+
+    .library-content__text {
+        font-size: 1.5rem;
+    }
+
+    .book-card {
+        gap: 2rem;
+    }
+
+    .book-card img {
+        width: 20vw;
+    }
+
+    .book-card__title {
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .book-card__description {
+        display: none;
+    }
+
+    .book-card__button {
+        padding: 0;
+    }
+
+    .category-cards__card {
+        width: 38vw;
+    }
+
+    .content-section__text__title {
+        font-size: 25px;
+    }
+
+    .content-section__text_description {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .content-section__button-link {
+        border: 3px #3c8442 solid;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 12px 5rem
+    }
+
+    .blog-container__image-icons img {
+        width: 65px;
+    }
+
+    .bio-container {
+        align-items: center;
+        width: 100%;
+    }
+
+    .bio-container__button-link {
+        border: 3px solid #44944A;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 13px 5rem;
+    }
+
+    .human-cards {
+        gap: 4rem;
+    }
+
+    .human-card__title {
+        font-size: 1.3rem;
+        max-width: 29vw;
+    }
+
+    .merch-section__title {
+        font-size: 2rem;
+    }
+
+    .merch-track {
+        transform: translateX(75px)
+    }
+
+    .merch-card {
+        min-width: 100%;
+    }
+
+    .merch-card__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .events h3 {
+        max-width: 80vw;
+        font-size: 1.5rem;
+    }
+
+    .events-list {
+        font-size: 1.2rem;
+    }
+
+    #calendar-grid {
+        font-size: 1.2rem;
+    }
+
+    .logo-desc {
+        font-size: 16px;
+    }
+
+    .lft-footer {
+        gap: 3rem;
+    }
+
+    .nav-menu li {
+        font-size: 1.4rem;
+    }
+
+    .footer-mailing__title {
+        font-size: 1.5rem;
+    }
+
+    .footer-mailing__text {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    #calendar-grid div {
+        padding: .5rem;
+    }
+
+    .blog-container__image {
+        background-image: url(/img/image-blog\ \(2\).jpg);
+    }
+
+    .merch-track {
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-menu {
+        gap: 1rem;
+    }
+
+    .header-menu svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .menu-icon__burger {
+        width: 35px;
+        height: 25px;
+    }
+
+    .menu-items {
+        top: 12%;
+        max-width: 100%;
+        padding: 3rem;
+    }
+
+    .menu-item {
+        font-size: 1.2rem;
+    }
+
+    .slider-content {
+        padding: 0px 2rem;
+    }
+
+    .library-content__text {
+        margin-bottom: 2rem;
+    }
+
+    .book-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .slider-buttons {
+        width: 95vw;
+    }
+
+    .category-cards__card:nth-child(2),
+    .category-cards__card:nth-child(3),
+    .category-cards__card:nth-child(4),
+    .category-cards__card:nth-child(5) {
+        display: none;
+    }
+
+    .category-cards__card {
+        width: 45vw;
+        padding-left: .7rem;
+        padding-bottom: .7rem;
+    }
+
+    .category-cards__card__title {
+        max-width: 5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .category-cards__card__button-container {
+        gap: 1.5rem;
+        width: 9rem;
+        height: 1.5rem;
+    }
+
+    .category-section__category-cards {
+        margin-bottom: 50px;
+    }
+
+    .category-section__button-contaner button {
+        width: 85vw;
+    }
+
+    .category-section__button-contaner button {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .blog-container__image {
+        width: 95%;
+        height: 27vh;
+        object-fit: cover;
+    }
+
+    .content-section__text__title {
+        font-size: 19px;
+    }
+
+    .content-section__text_description {
+        font-size: 1rem;
+        max-width: 80vw;
+        font-weight: 500;
+    }
+
+    .content-section__button-link {
+        border: 3px #3c8442 solid;
+        font-size: 1.4rem;
+        font-weight: 700;
+        padding: 8px 2.5rem;
+    }
+
+    .circle-2 {
+        width: 50%;
+        top: 0%;
+        right: -15%;
+    }
+
+    .circle-1 {
+        left: -15%;
+        bottom: -1%;
+        width: 50%;
+    }
+
+    .blog-container__image-icons img {
+        width: 45px;
+    }
+
+    .user-link-account {
+        display: none;
+    }
+
+    .burger div {
+        margin: 3px;
+        height: 5px;
+    }
+
+    .burger.active div:nth-child(1) {
+        width: 35px;
+        transform: rotate(45deg) translateY(10.5px);
+    }
+
+    .burger.active div:nth-child(3) {
+        width: 35px;
+        transform: rotate(-45deg) translateY(-12px);
+    }
+
+    .carousel-item__title-container {
+        bottom: 20%;
+    }
+
+    .carousel-item__title {
+        max-width: 90vw;
+        font-size: 120%;
+        line-height: 1.5rem;
+        letter-spacing: 0px;
+    }
+
+    .news-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .news-content p {
+        max-width: 85vw;
+        font-size: 1rem;
+    }
+
+    .button-container__text {
+        font-size: 1.2rem;
+    }
+
+    .events,
+    .calendar {
+        padding: 1rem;
+    }
+
+    .events h3 {
+        max-width: 100vw;
+        font-size: 1rem;
+    }
+
+    .merch-track {
+        transform: translateX(35px);
+    }
+
+    .blog-container {
+        max-width: 90vw;
+    }
+
+    .content-section__text_description {
+        font-size: 1.2rem;
+        max-width: 90vw;
+        font-weight: 500;
+    }
+
+    .content-section__text_description span {
+        display: none;
+    }
+
+    .logo img {
+        width: 60vw;
+    }
+
+    .logo-desc {
+        max-width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .lft-footer {
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .footer-mailing__text {
+        font-size: 1rem;
+    }
+
+    .footer-mailing__input {
+        height: 40px;
+    }
+
+    .footer-mailing__button {
+        border: 2px #3c8442 solid;
+        font-size: 1rem;
+    }
+
+    .footer-contacts__social-link svg {
+        width: 40px;
+    }
+
+    .footer-contacts__connection a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .category-section__category-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .category-cards__card {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .book-card__title {
+        width: 100%;
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .human-card img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .human-card__title {
+        font-size: 1rem;
+        max-width: 20vw;
+    }
+
+    .bio-container__button-link {
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 13px 2.5rem;
+    }
+
+    .merch-card img {
+        max-width: 50%;
+    }
+
+    .merch-section__title {
+        font-size: 1.5rem;
+    }
+
+    .footer-contacts__connection a {
+        font-size: 1rem;
+    }
+
+    #calendar-grid div {
+        padding: .3rem;
+    }
 }
