@@ -198,87 +198,137 @@
     </section>
     <section class="category-section">
         <!-- <div class="slider"> -->
-            <input type="radio" id="library" name="slider" checked>
-            <input type="radio" id="categories" name="slider">
-            <div class="slider-buttons">
-                <label for="library" class="slider-btn">Библиотека</label>
-                <label for="categories" class="slider-btn">Актуальное</label>
-                <span class="slider-indicator"></span>
-            </div>
+        <input type="radio" id="library" name="slider" checked>
+        <input type="radio" id="categories" name="slider">
+        <div class="slider-buttons">
+            <label for="library" class="slider-btn">Библиотека</label>
+            <label for="categories" class="slider-btn">Актуальное</label>
+            <span class="slider-indicator"></span>
+        </div>
 
-            <div class="slider-content">
-                <div class="content" id="library-content">
-                    <p>Содержимое для Библиотеки</p>
+        <div class="slider-content">
+            <div class="content" id="library-content">
+                <p class="library-content__text">
+                    Библиотека Агро-Вики
+                </p>
+                <div class="book-cards">
+                    <article class="book-card">
+                        <img src="/img/book (1).webp" alt="">
+                        <div class="book-card__title-container">
+                            <h1 class="book-card__title">Плодоводство. Учебник для вузов</h1>
+                            <p class="book-card__description">Рассмотрены основы классификации и биологии плодовых
+                                растений, включая способы размножения и современные технологии выращивания посадочного
+                                материала. </p>
+                            <button class="book-card__button">
+                                <a href="" class="book-card__link">Читать</a>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="/img/book (2).webp" alt="">
+                        <div class="book-card__title-container">
+                            <h1 class="book-card__title">Агрохимия. Учебное пособие для вузов</h1>
+                            <p class="book-card__description">Учебное пособие имеет 13 глав. Изложены задачи и методы
+                                агрохимии, основы питания растений, агрохимические свойства почв, химическая их
+                                мелиорация, химические элементы в жизни растений.</p>
+                            <button class="book-card__button">
+                                <a href="" class="book-card__link">Читать</a>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="/img/book (3).webp" alt="">
+                        <div class="book-card__title-container">
+                            <h1 class="book-card__title">Основы агрономии. Практикум. Учебное пособие для СПО</h1>
+                            <p class="book-card__description">Практикум написан в соответствии с требованиями ФГОС СПО
+                                по специальности «Агрономия» и в соответствии с федеральным базисным учебным планом,
+                                примерными учебными планами для образовательных учреждений Российской Федерации</p>
+                            <button class="book-card__button">
+                                <a href="" class="book-card__link">Читать</a>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="book-card">
+                        <img src="/img/book (4).webp" alt="">
+                        <div class="book-card__title-container">
+                            <h1 class="book-card__title">Частное плодоводство. Виноград. Учебное пособие для СПО</h1>
+                            <p class="book-card__description">Книга посвящена винограду, значение которого в питании
+                                человека трудно переоценить. Его плоды потребляются в свежем виде и перерабатываются в
+                                различные продукты, включая восточные сладости.</p>
+                            <button class="book-card__button">
+                                <a href="" class="book-card__link">Читать</a>
+                            </button>
+                        </div>
+                    </article>
                 </div>
-                <div class="content" id="categories-content">
-                    <div class="category-section__category-cards">
-                        <div class="category-cards__card category-cards__image1 category-cards__glass">
-                            <h2 class="category-cards__card__title">Земледелие</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image2 category-cards__glass">
-                            <h2 class="category-cards__card__title">Садоводство</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image3 category-cards__glass">
-                            <h2 class="category-cards__card__title">Почтвоведение</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image4 category-cards__glass">
-                            <h2 class="category-cards__card__title">Агроэкология</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image5 category-cards__glass">
-                            <h2 class="category-cards__card__title">Механизация АПК</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image6 category-cards__glass">
-                            <h2 class="category-cards__card__title">Правовые нормативы</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image7 category-cards__glass">
-                            <h2 class="category-cards__card__title">Образование в АПК</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                        <div class="category-cards__card category-cards__image8 category-cards__glass">
-                            <h2 class="category-cards__card__title">Кадры в АПК</h2>
-                            <div class="category-cards__card__button-container">
-                                <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
-                                    alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category-section__button-contaner">
-                        <button>Перейти в библиотеку</button>
-                    </div>
+                <div class="category-section__button-contaner">
+                    <button>Перейти в библиотеку</button>
                 </div>
             </div>
-        <!-- </div> -->
-        <!-- <div class="category-section__title">
-            <span><a href="#">Библиотека</a></span>
-            <a href="#">Актульное</a>
-        </div> -->
+            <div class="content" id="categories-content">
+                <div class="category-section__category-cards">
+                    <div class="category-cards__card category-cards__image1 category-cards__glass">
+                        <h2 class="category-cards__card__title">Земледелие</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image2 category-cards__glass">
+                        <h2 class="category-cards__card__title">Садоводство</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image3 category-cards__glass">
+                        <h2 class="category-cards__card__title">Почтвоведение</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image4 category-cards__glass">
+                        <h2 class="category-cards__card__title">Агроэкология</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image5 category-cards__glass">
+                        <h2 class="category-cards__card__title">Механизация АПК</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image6 category-cards__glass">
+                        <h2 class="category-cards__card__title">Правовые нормативы</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image7 category-cards__glass">
+                        <h2 class="category-cards__card__title">Образование в АПК</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="category-cards__card category-cards__image8 category-cards__glass">
+                        <h2 class="category-cards__card__title">Кадры в АПК</h2>
+                        <div class="category-cards__card__button-container">
+                            <p class="category-cards__card__button-link">Перейти </p><img src="/img/arrow-right.svg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-section__button-contaner">
+                    <button>Перейти в библиотеку</button>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="content-section center">
         <article class="blog-container">
@@ -287,9 +337,9 @@
                 <div class="blog-container__image-icons">
                     <img src="/img/dzen-icon.svg" alt="" class="blog-container__icon-dzen">
                     <!-- <div class="blog-container__arrow-button">
-                            <a href="#" class="arrow-button__left"><img src="/img/button-arrow-lft.svg" alt=""></a>
-                            <a href="#" class="arrow-button__right"><img src="/img/button-arrow-rgt.svg" alt=""></a>
-                        </div> -->
+                                <a href="#" class="arrow-button__left"><img src="/img/button-arrow-lft.svg" alt=""></a>
+                                <a href="#" class="arrow-button__right"><img src="/img/button-arrow-rgt.svg" alt=""></a>
+                            </div> -->
                 </div>
             </div>
             <div class="content-section__text">
@@ -298,15 +348,16 @@
                     отношениях
                     хозяйствующих субъектов. Отчасти его роль объясняется специфическими природными свойствами
                     самого
-                    металла: стабильностью (не подвержено коррозии и разложению), чистотой месторождений. Значение
-                    имеет
-                    и
-                    редкость этого элемента. 1
-                    В современной экономике золото находит широкое применение. Им торгуют на бирже так же как и
-                    другими
-                    ресурсами и товарами — углём, нефтью, электричеством. Поэтому, прежде всего, оно рассматривается
-                    как
-                    высокоценный металл. </p>
+                    металла: стабильностью (не подвержено коррозии и разложению), чистотой месторождений. <span>
+                        Значение
+                        имеет
+                        и
+                        редкость этого элемента. 1
+                        В современной экономике золото находит широкое применение. Им торгуют на бирже так же как и
+                        другими
+                        ресурсами и товарами — углём, нефтью, электричеством. Поэтому, прежде всего, оно рассматривается
+                        как
+                        высокоценный металл.</span> </p>
             </div>
             <div class="content-section__button">
                 <button class="content-section__button-link button-hover-green">
@@ -351,8 +402,6 @@
         <img class="circle-1" src="/img/circle.png" alt="">
         <img class="circle-2" src="/img/circle.png" alt="">
     </section>
-
-
     <section class="merch-section" aria-label="Merchandise Carousel">
         <h1 class="merch-section__title">Наш Мерч</h1>
         <div class="merch-track">
